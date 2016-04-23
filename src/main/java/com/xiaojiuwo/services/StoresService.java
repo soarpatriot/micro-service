@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 public class StoresService {
 
 
-
     @HystrixCommand(fallbackMethod = "defaultParticipants")
     public String getParticipants(String raceId) {
         return "hello";

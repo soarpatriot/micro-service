@@ -75,10 +75,7 @@
               </property>
        </bean>
        <!-- 对数据源进行事务管理 -->
-       <bean id="transactionManager"
-             class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
-             p:dataSource-ref="druidDataSource" />
-       <tx:annotation-driven mode="proxy"
-                             transaction-manager="transactionManager" />
+
+
 
 </beans>

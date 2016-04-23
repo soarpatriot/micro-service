@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.turbine.EnableTurbine;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
@@ -19,6 +20,7 @@ import org.springframework.context.annotation.ImportResource;
 @EnableEurekaClient
 @ImportResource("classpath:config/applicationContext.xml")
 @EnableCircuitBreaker
+@EnableTurbine
 public class Application {
 
     public static void main(String[] args) {

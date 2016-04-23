@@ -28,13 +28,18 @@ logging:
         org.springframework: 'OFF'
         com.xiaojiuwo.models.mapper: 'DEBUG'
 
+turbine:
+  aggregator:
+    clusterConfig: JAVA-SERVICE
+  appConfig: java-service
+
 
 eureka:
   client:
     healthcheck:
       enabled: true
     serviceUrl:
-      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
+      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://peer1:8761}/eureka/
 
   instance:
     hostname: localhost
